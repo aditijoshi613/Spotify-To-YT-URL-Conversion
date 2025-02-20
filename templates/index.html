@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Text Processor</title>
+</head>
+<body>
+    <h1>Convert Spotify URL to YouTube URL</h1>
+    <form method="POST">
+        <label for="user_input">Spotify URL:</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <button type="submit">Convert</button>
+    </form>
+
+    {% if result %}
+    <h2>YouTube URL To Your Song:</h2>
+    <p><a href="{{ result }}" target="_blank">{{ result }}</a></p>
+    {% endif %}
+</body>
+</html>
